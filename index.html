@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <h1>Health Monitoring Website</h1>
+
+    <!-- User Registration/Login -->
+    <div id="auth-section">
+        <h2>Register/Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="registerBtn">Register</button>
+        <button id="loginBtn">Login</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- User Dashboard -->
+    <div id="dashboard" style="display:none;">
+        <h2>User Dashboard</h2>
+        <h3>Personal Information</h3>
+        <input type="text" id="age" placeholder="Age">
+        <input type="text" id="height" placeholder="Height (cm)">
+        <input type="text" id="weight" placeholder="Weight (kg)">
+        <button id="savePersonalData">Save Personal Data</button>
+
+        <h3>Blood Analysis</h3>
+        <input type="text" id="erythrocytes" placeholder="Erythrocytes (million/µL)">
+        <input type="text" id="platelets" placeholder="Platelets (thousand/µL)">
+        <button id="saveBloodAnalysis">Save Blood Analysis</button>
+
+        <h3>Health Statistics</h3>
+        <div id="statistics"></div>
+    </div>
+</body>
+
+</html>
